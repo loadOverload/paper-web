@@ -1,0 +1,222 @@
+/* === Reset & Base === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text: #1a1a1a;
+  --muted: #555;
+  --light: #888;
+  --accent: #2c5aa0;
+  --bg: #fdfdfc;
+  --rule: #e0ded8;
+  --table-stripe: #f7f6f3;
+  --table-border: #d8d6d0;
+}
+
+html {
+  font-size: 17px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "STSong", "SimSun", "Songti SC", Georgia, serif;
+  color: var(--text);
+  background: var(--bg);
+  padding: 2rem 0 6rem;
+}
+
+/* === Article Container === */
+#paper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* === Headings === */
+#paper h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  margin: 1.5rem 0 2.25rem;
+  letter-spacing: 0.02em;
+}
+
+#paper h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+#paper h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 1.75rem 0 0.75rem;
+}
+
+/* === Paragraphs === */
+#paper p {
+  margin: 0.85rem 0;
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+/* === Bold & Emphasis === */
+#paper strong {
+  font-weight: 700;
+}
+
+#paper em {
+  font-style: italic;
+}
+
+/* === Links === */
+#paper a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#paper a:hover {
+  text-decoration: underline;
+}
+
+/* === Horizontal Rules === */
+#paper hr {
+  border: none;
+  height: 1px;
+  background: var(--rule);
+  margin: 2rem 0;
+}
+
+/* === Blockquotes === */
+#paper blockquote {
+  margin: 1rem 0;
+  padding: 0.5rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: #f9f8f6;
+  color: var(--muted);
+}
+
+#paper blockquote p {
+  margin: 0.35rem 0;
+}
+
+/* === Lists === */
+#paper ul,
+#paper ol {
+  margin: 0.65rem 0;
+  padding-left: 1.75rem;
+}
+
+#paper li {
+  margin: 0.25rem 0;
+}
+
+/* === Code === */
+#paper code {
+  font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", Menlo, monospace;
+  font-size: 0.88em;
+  background: #f2f1ed;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+#paper pre {
+  overflow-x: auto;
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  background: #f4f3ef;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+#paper pre code {
+  background: none;
+  padding: 0;
+}
+
+/* === Tables === */
+#paper table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+
+#paper thead th {
+  background: var(--table-stripe);
+  font-weight: 700;
+  text-align: left;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--table-border);
+}
+
+#paper tbody td {
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--table-border);
+  vertical-align: top;
+}
+
+#paper tbody tr:nth-child(even) td {
+  background: var(--table-stripe);
+}
+
+/* === Footnotes === */
+#paper .footnotes-sep {
+  margin: 2.5rem 0 1rem;
+  border: none;
+  height: 1px;
+  background: var(--rule);
+}
+
+#paper .footnotes {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+#paper .footnotes ol {
+  padding-left: 1.25rem;
+}
+
+#paper .footnotes ol li {
+  margin: 0.45rem 0;
+}
+
+#paper .footnotes ol li p {
+  display: inline;
+  margin: 0;
+}
+
+#paper .footnotes ol li a {
+  color: var(--accent);
+  font-size: 0.85em;
+}
+
+#paper sup.footnote-ref a {
+  font-size: 0.8em;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#paper .footnote-backref {
+  font-size: 0.85em;
+  margin-left: 0.2em;
+  text-decoration: none;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  html { font-size: 15px; }
+  body { padding: 1rem 0 4rem; }
+  #paper h1 { font-size: 1.4rem; }
+  #paper h2 { font-size: 1.1rem; }
+}
