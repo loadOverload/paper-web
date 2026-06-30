@@ -1,3 +1,13 @@
+<div class="audio-card">
+  <a href="https://www.bilibili.com/video/BV1hx411b7CZ" target="_blank" rel="noopener">
+    <span class="audio-card-icon">&#9835;</span>
+    <span class="audio-card-info">
+      <span class="audio-card-title">Unknown Mother-Goose</span>
+      <span class="audio-card-artist">wowaka feat. 初音ミク</span>
+    </span>
+  </a>
+</div>
+
 # 数字竞技的灰色地带——电子竞技漏洞利用的规则边界与法理学争议
 
 ## 摘要

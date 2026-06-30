@@ -44,6 +44,51 @@ body {
   padding: 0 1.5rem;
 }
 
+/* === Audio Card === */
+.audio-card {
+  margin: 1rem 0 1.5rem;
+}
+
+.audio-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 8px;
+  background: var(--color-bg-off);
+  color: var(--color-body);
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.audio-card a:hover {
+  border-color: var(--color-accent);
+  background: #eef2f8;
+  text-decoration: none;
+}
+
+.audio-card-icon {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.audio-card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.audio-card-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.audio-card-artist {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
 /* === Headings === */
 #paper h1 {
   font-size: 1.75rem;
