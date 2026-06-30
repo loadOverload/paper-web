@@ -1,3 +1,7 @@
+/* ========================================
+   学术论文渲染样式
+   ======================================== */
+
 /* === Reset & Base === */
 *,
 *::before,
@@ -8,34 +12,36 @@
 }
 
 :root {
-  --text: #1a1a1a;
-  --muted: #555;
-  --light: #888;
-  --accent: #2c5aa0;
-  --bg: #fdfdfc;
-  --rule: #e0ded8;
-  --table-stripe: #f7f6f3;
-  --table-border: #d8d6d0;
+  --color-body: #1a1a1a;
+  --color-muted: #555;
+  --color-light: #888;
+  --color-accent: #2c5aa0;
+  --color-bg: #fdfdfc;
+  --color-bg-off: #f4f3ef;
+  --color-rule: #d8d6d0;
+  --color-table-stripe: #f7f6f3;
+  --color-table-border: #d8d6d0;
+  --measure: 760px;
 }
 
 html {
   font-size: 17px;
-  line-height: 1.8;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "STSong", "SimSun", "Songti SC", Georgia, serif;
-  color: var(--text);
-  background: var(--bg);
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "SimSun", "PMingLiU", serif;
+  color: var(--color-body);
+  background: var(--color-bg);
   padding: 2rem 0 6rem;
 }
 
 /* === Article Container === */
 #paper {
-  max-width: 720px;
+  max-width: var(--measure);
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 1.5rem;
 }
 
 /* === Headings === */
@@ -49,16 +55,16 @@ body {
 }
 
 #paper h2 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
   margin: 2.5rem 0 1rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--color-rule);
 }
 
 #paper h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   margin: 1.75rem 0 0.75rem;
 }
 
@@ -66,21 +72,16 @@ body {
 #paper p {
   margin: 0.85rem 0;
   text-align: justify;
-  text-justify: inter-character;
 }
 
 /* === Bold & Emphasis === */
 #paper strong {
-  font-weight: 700;
-}
-
-#paper em {
-  font-style: italic;
+  font-weight: 800;
 }
 
 /* === Links === */
 #paper a {
-  color: var(--accent);
+  color: var(--color-accent);
   text-decoration: none;
 }
 
@@ -92,17 +93,18 @@ body {
 #paper hr {
   border: none;
   height: 1px;
-  background: var(--rule);
-  margin: 2rem 0;
+  background: var(--color-rule);
+  margin: 2.5rem 0;
 }
 
 /* === Blockquotes === */
 #paper blockquote {
-  margin: 1rem 0;
-  padding: 0.5rem 1.25rem;
-  border-left: 3px solid var(--accent);
-  background: #f9f8f6;
-  color: var(--muted);
+  margin: 1.25rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-bg-off);
+  color: var(--color-muted);
+  border-radius: 0 4px 4px 0;
 }
 
 #paper blockquote p {
@@ -117,15 +119,15 @@ body {
 }
 
 #paper li {
-  margin: 0.25rem 0;
+  margin: 0.3rem 0;
 }
 
 /* === Code === */
 #paper code {
-  font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", Menlo, monospace;
+  font-family: "Cascadia Code", "Fira Code", "Consolas", "Menlo", monospace;
   font-size: 0.88em;
-  background: #f2f1ed;
-  padding: 0.1em 0.3em;
+  background: var(--color-bg-off);
+  padding: 0.1em 0.35em;
   border-radius: 3px;
 }
 
@@ -133,7 +135,7 @@ body {
   overflow-x: auto;
   margin: 1rem 0;
   padding: 1rem 1.25rem;
-  background: #f4f3ef;
+  background: var(--color-bg-off);
   border-radius: 6px;
   font-size: 0.88rem;
   line-height: 1.55;
@@ -145,29 +147,36 @@ body {
 }
 
 /* === Tables === */
+#paper .table-wrapper {
+  overflow-x: auto;
+  margin: 1.25rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+
 #paper table {
   width: 100%;
+  min-width: 700px;
   border-collapse: collapse;
-  margin: 1.25rem 0;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 #paper thead th {
-  background: var(--table-stripe);
+  background: var(--color-table-stripe);
   font-weight: 700;
   text-align: left;
-  padding: 0.45rem 0.65rem;
-  border: 1px solid var(--table-border);
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--color-table-border);
+  white-space: nowrap;
 }
 
 #paper tbody td {
-  padding: 0.4rem 0.65rem;
-  border: 1px solid var(--table-border);
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--color-table-border);
   vertical-align: top;
 }
 
 #paper tbody tr:nth-child(even) td {
-  background: var(--table-stripe);
+  background: var(--color-table-stripe);
 }
 
 /* === Footnotes === */
@@ -175,12 +184,14 @@ body {
   margin: 2.5rem 0 1rem;
   border: none;
   height: 1px;
-  background: var(--rule);
+  background: var(--color-rule);
 }
 
 #paper .footnotes {
-  font-size: 0.8rem;
-  color: var(--muted);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 #paper .footnotes ol {
@@ -188,7 +199,7 @@ body {
 }
 
 #paper .footnotes ol li {
-  margin: 0.45rem 0;
+  margin: 0.5rem 0;
 }
 
 #paper .footnotes ol li p {
@@ -197,26 +208,68 @@ body {
 }
 
 #paper .footnotes ol li a {
-  color: var(--accent);
-  font-size: 0.85em;
+  color: var(--color-accent);
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 #paper sup.footnote-ref a {
-  font-size: 0.8em;
-  color: var(--accent);
+  font-size: 0.82em;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
 #paper .footnote-backref {
-  font-size: 0.85em;
-  margin-left: 0.2em;
+  display: inline-block;
+  font-size: 0.9em;
+  margin-left: 0.25em;
   text-decoration: none;
+  padding: 0.1em 0.3em;
 }
 
 /* === Responsive === */
-@media (max-width: 600px) {
-  html { font-size: 15px; }
-  body { padding: 1rem 0 4rem; }
-  #paper h1 { font-size: 1.4rem; }
-  #paper h2 { font-size: 1.1rem; }
+@media (max-width: 640px) {
+  html { font-size: 16px; }
+  body { padding: 1.25rem 0 4rem; }
+  #paper { padding: 0 1rem; }
+  #paper h1 { font-size: 1.45rem; }
+  #paper h2 { font-size: 1.15rem; }
+  #paper blockquote { margin: 1rem 0; padding: 0.6rem 1rem; }
+}
+
+/* === Print === */
+@media print {
+  :root {
+    --color-body: #000;
+    --color-bg: #fff;
+    --color-rule: #ccc;
+    --color-accent: #000;
+    --color-muted: #333;
+    --color-bg-off: #fff;
+    --color-table-stripe: #f5f5f5;
+    --color-table-border: #ccc;
+  }
+
+  html { font-size: 12pt; line-height: 1.6; }
+  body { padding: 0; }
+
+  #paper {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  #paper h1 { font-size: 1.5rem; page-break-before: avoid; }
+  #paper h2 { font-size: 1.2rem; page-break-after: avoid; }
+  #paper h3 { font-size: 1.05rem; page-break-after: avoid; }
+  #paper p { orphans: 3; widows: 3; }
+
+  #paper a { color: var(--color-body); }
+  #paper a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: var(--color-light);
+  }
+
+  #paper .footnotes-sep { page-break-before: always; }
+  #paper table { min-width: auto; }
 }

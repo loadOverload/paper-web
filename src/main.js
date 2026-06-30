@@ -22,3 +22,11 @@ const text = await res.text()
 const html = md.render(text)
 
 document.getElementById('paper').innerHTML = html
+
+// Wrap tables for responsive horizontal scroll
+document.querySelectorAll('#paper table').forEach(table => {
+  const wrapper = document.createElement('div')
+  wrapper.className = 'table-wrapper'
+  table.parentNode.insertBefore(wrapper, table)
+  wrapper.appendChild(table)
+})
