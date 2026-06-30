@@ -3,7 +3,7 @@ import footnotePlugin from 'markdown-it-footnote'
 import './style.css'
 
 const md = new MarkdownIt({
-  html: false,
+  html: true,
   linkify: true,
   typographer: true,
 })
